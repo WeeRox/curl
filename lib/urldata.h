@@ -49,6 +49,7 @@
 #define PORT_RTMPT PORT_HTTP
 #define PORT_RTMPS PORT_HTTPS
 #define PORT_GOPHER 70
+#define PORT_DNS 53
 
 #define DICT_MATCH "/MATCH:"
 #define DICT_MATCH2 "/M:"

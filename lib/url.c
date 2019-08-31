@@ -120,6 +120,7 @@ bool curl_win32_idn_to_ascii(const char *in, char **out);
 #include "strdup.h"
 #include "setopt.h"
 #include "altsvc.h"
+#include "dns.h"
 
 /* The last 3 #include files should be in this order */
 #include "curl_printf.h"
@@ -240,6 +241,10 @@ static const struct Curl_handler * const protocols[] = {
   &Curl_handler_rtmps,
   &Curl_handler_rtmpts,
 #endif
+
+//#ifndef CURL_DISABLE_DNS
+  &Curl_handler_dns,
+//#endif
 
   (struct Curl_handler *) NULL
 };
